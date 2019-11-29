@@ -6,20 +6,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class Feature {
 
-    @SerializedName("type")
-    @Expose
     private String type;
-    @SerializedName("id")
-    @Expose
     private String id;
-    @SerializedName("geometry")
-    @Expose
     private Geometry geometry;
-    @SerializedName("geometry_name")
-    @Expose
     private String geometryName;
-    @SerializedName("properties")
-    @Expose
     private Properties properties;
 
     /**

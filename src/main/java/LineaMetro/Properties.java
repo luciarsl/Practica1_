@@ -6,66 +6,26 @@ import com.google.gson.annotations.SerializedName;
 
 public class Properties {
 
-    @SerializedName("ID_LINIA")
-    @Expose
-    private int iDLINIA;
-    @SerializedName("CODI_LINIA")
-    @Expose
-    private int cODILINIA;
-    @SerializedName("NOM_LINIA")
-    @Expose
-    private String nOMLINIA;
-    @SerializedName("DESC_LINIA")
-    @Expose
-    private String dESCLINIA;
-    @SerializedName("ORIGEN_LINIA")
-    @Expose
-    private String oRIGENLINIA;
-    @SerializedName("DESTI_LINIA")
-    @Expose
-    private String dESTILINIA;
-    @SerializedName("NUM_PAQUETS")
-    @Expose
-    private int nUMPAQUETS;
-    @SerializedName("ID_OPERADOR")
-    @Expose
-    private int iDOPERADOR;
-    @SerializedName("NOM_OPERADOR")
-    @Expose
-    private String nOMOPERADOR;
-    @SerializedName("NOM_TIPUS_TRANSPORT")
-    @Expose
-    private String nOMTIPUSTRANSPORT;
-    @SerializedName("CODI_FAMILIA")
-    @Expose
-    private int cODIFAMILIA;
-    @SerializedName("NOM_FAMILIA")
-    @Expose
-    private String nOMFAMILIA;
-    @SerializedName("ORDRE_FAMILIA")
-    @Expose
-    private int oRDREFAMILIA;
-    @SerializedName("ORDRE_LINIA")
-    @Expose
-    private int oRDRELINIA;
-    @SerializedName("CODI_TIPUS_CALENDARI")
-    @Expose
-    private String cODITIPUSCALENDARI;
-    @SerializedName("NOM_TIPUS_CALENDARI")
-    @Expose
-    private String nOMTIPUSCALENDARI;
-    @SerializedName("DATA")
-    @Expose
-    private String dATA;
-    @SerializedName("COLOR_LINIA")
-    @Expose
-    private String cOLORLINIA;
-    @SerializedName("COLOR_AUX_LINIA")
-    @Expose
-    private String cOLORAUXLINIA;
-    @SerializedName("COLOR_TEXT_LINIA")
-    @Expose
-    private String cOLORTEXTLINIA;
+    private int ID_LINIA;
+    private int CODI_LINIA;
+    private String NOM_LINIA;
+    private String DESC_LINIA;
+    private String ORIGEN_LINIA;
+    private String DESTI_LINIA;
+    private int NUM_PAQUETS;
+    private int ID_OPERADOR;
+    private String NOM_OPERADOR;
+    private String NOM_TIPUS_TRANSPORT;
+    private int CODI_FAMILIA;
+    private String NOM_FAMILIA;
+    private int ORDRE_FAMILIA;
+    private int ORDRE_LINIA;
+    private String CODI_TIPUS_CALENDARI;
+    private String NOM_TIPUS_CALENDARI;
+    private String DATA;
+    private String COLOR_LINIA;
+    private String COLOR_AUX_LINIA;
+    private String COLOR_TEXT_LINIA;
 
     /**
      * No args constructor for use in serialization
@@ -76,209 +36,209 @@ public class Properties {
 
     /**
      * 
-     * @param cODIFAMILIA
-     * @param nOMTIPUSCALENDARI
-     * @param nOMFAMILIA
-     * @param dATA
-     * @param cOLORTEXTLINIA
-     * @param cODILINIA
-     * @param iDLINIA
-     * @param cODITIPUSCALENDARI
-     * @param dESCLINIA
-     * @param cOLORLINIA
-     * @param dESTILINIA
-     * @param iDOPERADOR
-     * @param nOMOPERADOR
-     * @param nUMPAQUETS
-     * @param oRDRELINIA
-     * @param nOMLINIA
-     * @param cOLORAUXLINIA
-     * @param nOMTIPUSTRANSPORT
-     * @param oRDREFAMILIA
-     * @param oRIGENLINIA
+     * @param CODI_FAMILIA
+     * @param NOM_TIPUS_CALENDARI
+     * @param NOM_FAMILIA
+     * @param DATA
+     * @param COLOR_TEXT_LINIA
+     * @param CODI_LINIA
+     * @param ID_LINIA
+     * @param CODI_TIPUS_CALENDARI
+     * @param DESC_LINIA
+     * @param COLOR_LINIA
+     * @param DESTI_LINIA
+     * @param ID_OPERADOR
+     * @param NOM_OPERADOR
+     * @param NUM_PAQUETS
+     * @param ORDRE_LINIA
+     * @param NOM_LINIA
+     * @param COLOR_AUX_LINIA
+     * @param NOM_TIPUS_TRANSPORT
+     * @param ORDRE_FAMILIA
+     * @param ORIGEN_LINIA
      */
-    public Properties(int iDLINIA, int cODILINIA, String nOMLINIA, String dESCLINIA, String oRIGENLINIA, String dESTILINIA, int nUMPAQUETS, int iDOPERADOR, String nOMOPERADOR, String nOMTIPUSTRANSPORT, int cODIFAMILIA, String nOMFAMILIA, int oRDREFAMILIA, int oRDRELINIA, String cODITIPUSCALENDARI, String nOMTIPUSCALENDARI, String dATA, String cOLORLINIA, String cOLORAUXLINIA, String cOLORTEXTLINIA) {
+    public Properties(int ID_LINIA, int CODI_LINIA, String NOM_LINIA, String DESC_LINIA, String ORIGEN_LINIA, String DESTI_LINIA, int NUM_PAQUETS, int ID_OPERADOR, String NOM_OPERADOR, String NOM_TIPUS_TRANSPORT, int CODI_FAMILIA, String NOM_FAMILIA, int ORDRE_FAMILIA, int ORDRE_LINIA, String CODI_TIPUS_CALENDARI, String NOM_TIPUS_CALENDARI, String DATA, String COLOR_LINIA, String COLOR_AUX_LINIA, String COLOR_TEXT_LINIA) {
         super();
-        this.iDLINIA = iDLINIA;
-        this.cODILINIA = cODILINIA;
-        this.nOMLINIA = nOMLINIA;
-        this.dESCLINIA = dESCLINIA;
-        this.oRIGENLINIA = oRIGENLINIA;
-        this.dESTILINIA = dESTILINIA;
-        this.nUMPAQUETS = nUMPAQUETS;
-        this.iDOPERADOR = iDOPERADOR;
-        this.nOMOPERADOR = nOMOPERADOR;
-        this.nOMTIPUSTRANSPORT = nOMTIPUSTRANSPORT;
-        this.cODIFAMILIA = cODIFAMILIA;
-        this.nOMFAMILIA = nOMFAMILIA;
-        this.oRDREFAMILIA = oRDREFAMILIA;
-        this.oRDRELINIA = oRDRELINIA;
-        this.cODITIPUSCALENDARI = cODITIPUSCALENDARI;
-        this.nOMTIPUSCALENDARI = nOMTIPUSCALENDARI;
-        this.dATA = dATA;
-        this.cOLORLINIA = cOLORLINIA;
-        this.cOLORAUXLINIA = cOLORAUXLINIA;
-        this.cOLORTEXTLINIA = cOLORTEXTLINIA;
+        this.ID_LINIA = ID_LINIA;
+        this.CODI_LINIA = CODI_LINIA;
+        this.NOM_LINIA = NOM_LINIA;
+        this.DESC_LINIA = DESC_LINIA;
+        this.ORIGEN_LINIA = ORIGEN_LINIA;
+        this.DESTI_LINIA = DESTI_LINIA;
+        this.NUM_PAQUETS = NUM_PAQUETS;
+        this.ID_OPERADOR = ID_OPERADOR;
+        this.NOM_OPERADOR = NOM_OPERADOR;
+        this.NOM_TIPUS_TRANSPORT = NOM_TIPUS_TRANSPORT;
+        this.CODI_FAMILIA = CODI_FAMILIA;
+        this.NOM_FAMILIA = NOM_FAMILIA;
+        this.ORDRE_FAMILIA = ORDRE_FAMILIA;
+        this.ORDRE_LINIA = ORDRE_LINIA;
+        this.CODI_TIPUS_CALENDARI = CODI_TIPUS_CALENDARI;
+        this.NOM_TIPUS_CALENDARI = NOM_TIPUS_CALENDARI;
+        this.DATA = DATA;
+        this.COLOR_LINIA = COLOR_LINIA;
+        this.COLOR_AUX_LINIA = COLOR_AUX_LINIA;
+        this.COLOR_TEXT_LINIA = COLOR_TEXT_LINIA;
     }
 
     public int getIDLINIA() {
-        return iDLINIA;
+        return ID_LINIA;
     }
 
-    public void setIDLINIA(int iDLINIA) {
-        this.iDLINIA = iDLINIA;
+    public void setIDLINIA(int ID_LINIA) {
+        this.ID_LINIA = ID_LINIA;
     }
 
     public int getCODILINIA() {
-        return cODILINIA;
+        return CODI_LINIA;
     }
 
-    public void setCODILINIA(int cODILINIA) {
-        this.cODILINIA = cODILINIA;
+    public void setCODILINIA(int CODI_LINIA) {
+        this.CODI_LINIA = CODI_LINIA;
     }
 
     public String getNOMLINIA() {
-        return nOMLINIA;
+        return NOM_LINIA;
     }
 
-    public void setNOMLINIA(String nOMLINIA) {
-        this.nOMLINIA = nOMLINIA;
+    public void setNOMLINIA(String NOM_LINIA) {
+        this.NOM_LINIA = NOM_LINIA;
     }
 
     public String getDESCLINIA() {
-        return dESCLINIA;
+        return DESC_LINIA;
     }
 
-    public void setDESCLINIA(String dESCLINIA) {
-        this.dESCLINIA = dESCLINIA;
+    public void setDESCLINIA(String DESC_LINIA) {
+        this.DESC_LINIA = DESC_LINIA;
     }
 
     public String getORIGENLINIA() {
-        return oRIGENLINIA;
+        return ORIGEN_LINIA;
     }
 
-    public void setORIGENLINIA(String oRIGENLINIA) {
-        this.oRIGENLINIA = oRIGENLINIA;
+    public void setORIGENLINIA(String ORIGEN_LINIA) {
+        this.ORIGEN_LINIA = ORIGEN_LINIA;
     }
 
     public String getDESTILINIA() {
-        return dESTILINIA;
+        return DESTI_LINIA;
     }
 
-    public void setDESTILINIA(String dESTILINIA) {
-        this.dESTILINIA = dESTILINIA;
+    public void setDESTILINIA(String DESTI_LINIA) {
+        this.DESTI_LINIA = DESTI_LINIA;
     }
 
     public int getNUMPAQUETS() {
-        return nUMPAQUETS;
+        return NUM_PAQUETS;
     }
 
-    public void setNUMPAQUETS(int nUMPAQUETS) {
-        this.nUMPAQUETS = nUMPAQUETS;
+    public void setNUMPAQUETS(int NUM_PAQUETS) {
+        this.NUM_PAQUETS = NUM_PAQUETS;
     }
 
     public int getIDOPERADOR() {
-        return iDOPERADOR;
+        return ID_OPERADOR;
     }
 
-    public void setIDOPERADOR(int iDOPERADOR) {
-        this.iDOPERADOR = iDOPERADOR;
+    public void setIDOPERADOR(int ID_OPERADOR) {
+        this.ID_OPERADOR = ID_OPERADOR;
     }
 
     public String getNOMOPERADOR() {
-        return nOMOPERADOR;
+        return NOM_OPERADOR;
     }
 
-    public void setNOMOPERADOR(String nOMOPERADOR) {
-        this.nOMOPERADOR = nOMOPERADOR;
+    public void setNOMOPERADOR(String NOM_OPERADOR) {
+        this.NOM_OPERADOR = NOM_OPERADOR;
     }
 
     public String getNOMTIPUSTRANSPORT() {
-        return nOMTIPUSTRANSPORT;
+        return NOM_TIPUS_TRANSPORT;
     }
 
-    public void setNOMTIPUSTRANSPORT(String nOMTIPUSTRANSPORT) {
-        this.nOMTIPUSTRANSPORT = nOMTIPUSTRANSPORT;
+    public void setNOMTIPUSTRANSPORT(String NOM_TIPUS_TRANSPORT) {
+        this.NOM_TIPUS_TRANSPORT = NOM_TIPUS_TRANSPORT;
     }
 
     public int getCODIFAMILIA() {
-        return cODIFAMILIA;
+        return CODI_FAMILIA;
     }
 
-    public void setCODIFAMILIA(int cODIFAMILIA) {
-        this.cODIFAMILIA = cODIFAMILIA;
+    public void setCODIFAMILIA(int CODI_FAMILIA) {
+        this.CODI_FAMILIA = CODI_FAMILIA;
     }
 
     public String getNOMFAMILIA() {
-        return nOMFAMILIA;
+        return NOM_FAMILIA;
     }
 
-    public void setNOMFAMILIA(String nOMFAMILIA) {
-        this.nOMFAMILIA = nOMFAMILIA;
+    public void setNOMFAMILIA(String NOM_FAMILIA) {
+        this.NOM_FAMILIA = NOM_FAMILIA;
     }
 
     public int getORDREFAMILIA() {
-        return oRDREFAMILIA;
+        return ORDRE_FAMILIA;
     }
 
-    public void setORDREFAMILIA(int oRDREFAMILIA) {
-        this.oRDREFAMILIA = oRDREFAMILIA;
+    public void setORDREFAMILIA(int ORDRE_FAMILIA) {
+        this.ORDRE_FAMILIA = ORDRE_FAMILIA;
     }
 
     public int getORDRELINIA() {
-        return oRDRELINIA;
+        return ORDRE_LINIA;
     }
 
-    public void setORDRELINIA(int oRDRELINIA) {
-        this.oRDRELINIA = oRDRELINIA;
+    public void setORDRELINIA(int ORDRE_LINIA) {
+        this.ORDRE_LINIA = ORDRE_LINIA;
     }
 
     public String getCODITIPUSCALENDARI() {
-        return cODITIPUSCALENDARI;
+        return CODI_TIPUS_CALENDARI;
     }
 
-    public void setCODITIPUSCALENDARI(String cODITIPUSCALENDARI) {
-        this.cODITIPUSCALENDARI = cODITIPUSCALENDARI;
+    public void setCODITIPUSCALENDARI(String CODI_TIPUS_CALENDARI) {
+        this.CODI_TIPUS_CALENDARI = CODI_TIPUS_CALENDARI;
     }
 
     public String getNOMTIPUSCALENDARI() {
-        return nOMTIPUSCALENDARI;
+        return NOM_TIPUS_CALENDARI;
     }
 
-    public void setNOMTIPUSCALENDARI(String nOMTIPUSCALENDARI) {
-        this.nOMTIPUSCALENDARI = nOMTIPUSCALENDARI;
+    public void setNOMTIPUSCALENDARI(String NOM_TIPUS_CALENDARI) {
+        this.NOM_TIPUS_CALENDARI = NOM_TIPUS_CALENDARI;
     }
 
     public String getDATA() {
-        return dATA;
+        return DATA;
     }
 
-    public void setDATA(String dATA) {
-        this.dATA = dATA;
+    public void setDATA(String DATA) {
+        this.DATA = DATA;
     }
 
     public String getCOLORLINIA() {
-        return cOLORLINIA;
+        return COLOR_LINIA;
     }
 
-    public void setCOLORLINIA(String cOLORLINIA) {
-        this.cOLORLINIA = cOLORLINIA;
+    public void setCOLORLINIA(String COLOR_LINIA) {
+        this.COLOR_LINIA = COLOR_LINIA;
     }
 
     public String getCOLORAUXLINIA() {
-        return cOLORAUXLINIA;
+        return COLOR_AUX_LINIA;
     }
 
-    public void setCOLORAUXLINIA(String cOLORAUXLINIA) {
-        this.cOLORAUXLINIA = cOLORAUXLINIA;
+    public void setCOLORAUXLINIA(String COLOR_AUX_LINIA) {
+        this.COLOR_AUX_LINIA = COLOR_AUX_LINIA;
     }
 
     public String getCOLORTEXTLINIA() {
-        return cOLORTEXTLINIA;
+        return COLOR_TEXT_LINIA;
     }
 
-    public void setCOLORTEXTLINIA(String cOLORTEXTLINIA) {
-        this.cOLORTEXTLINIA = cOLORTEXTLINIA;
+    public void setCOLORTEXTLINIA(String COLOR_TEXT_LINIA) {
+        this.COLOR_TEXT_LINIA = COLOR_TEXT_LINIA;
     }
 
 }
