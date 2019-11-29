@@ -1,6 +1,4 @@
 
-//package salle.edu;
-
 import java.util.*;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
