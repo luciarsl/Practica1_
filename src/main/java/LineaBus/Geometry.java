@@ -1,5 +1,5 @@
 
-package salle.url;
+package LineaBus;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
@@ -7,11 +7,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class Geometry {
 
-    @SerializedName("type")
-    @Expose
     private String type;
-    @SerializedName("coordinates")
-    @Expose
+
     private List<List<List<Double>>> coordinates = null;
 
     /**

@@ -1,16 +1,13 @@
 
-package salle.url;
+package LineaBus;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Crs {
 
-    @SerializedName("type")
-    @Expose
     private String type;
-    @SerializedName("properties")
-    @Expose
+
     private Properties_ properties;
 
     /**

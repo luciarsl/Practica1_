@@ -1,25 +1,15 @@
 
-package salle.url;
+package LineaBus;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Feature {
 
-    @SerializedName("type")
-    @Expose
     private String type;
-    @SerializedName("id")
-    @Expose
     private String id;
-    @SerializedName("geometry")
-    @Expose
     private Geometry geometry;
-    @SerializedName("geometry_name")
-    @Expose
     private String geometryName;
-    @SerializedName("properties")
-    @Expose
     private Properties properties;
 
     /**
@@ -29,14 +19,6 @@ public class Feature {
     public Feature() {
     }
 
-    /**
-     * 
-     * @param geometryName
-     * @param geometry
-     * @param id
-     * @param type
-     * @param properties
-     */
     public Feature(String type, String id, Geometry geometry, String geometryName, Properties properties) {
         super();
         this.type = type;

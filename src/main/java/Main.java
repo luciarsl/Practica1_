@@ -1,7 +1,5 @@
-import com.google.gson.Gson;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import LineaBus.LineasBus;
+
 import java.io.IOException;
 import java.lang.*;
 
@@ -45,9 +43,8 @@ public class Main {
             Menu menu = new Menu();
             System.out.println("hola1");
             APIReader ap = new APIReader();
-            //hola
             System.out.println("hola2");
-            salle.url.LineasBus ll;
+            LineasBus ll;
             System.out.println("hola3");
             ap.leerLineasBus();
             System.out.println("hola4");

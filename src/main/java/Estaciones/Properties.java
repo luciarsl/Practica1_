@@ -8,16 +8,16 @@ public class Properties {
 
     @SerializedName("CODI_GRUP_ESTACIO")
     @Expose
-    private int cODIGRUPESTACIO;
+    private int CODI_GRUP_ESTACIO;
     @SerializedName("NOM_ESTACIO")
     @Expose
-    private String nOMESTACIO;
+    private String NOM_ESTACIO;
     @SerializedName("PICTO")
     @Expose
-    private String pICTO;
+    private String PICTO;
     @SerializedName("DATA")
     @Expose
-    private String dATA;
+    private String DATA;
 
     /**
      * No args constructor for use in serialization
@@ -28,49 +28,49 @@ public class Properties {
 
     /**
      * 
-     * @param dATA
-     * @param nOMESTACIO
-     * @param pICTO
-     * @param cODIGRUPESTACIO
+     * @param DATA
+     * @param NOM_ESTACIO
+     * @param PICTO
+     * @param CODIGRUPESTACIO
      */
-    public Properties(int cODIGRUPESTACIO, String nOMESTACIO, String pICTO, String dATA) {
+    public Properties(int CODIGRUPESTACIO, String NOM_ESTACIO, String PICTO, String DATA) {
         super();
-        this.cODIGRUPESTACIO = cODIGRUPESTACIO;
-        this.nOMESTACIO = nOMESTACIO;
-        this.pICTO = pICTO;
-        this.dATA = dATA;
+        this.CODI_GRUP_ESTACIO = CODIGRUPESTACIO;
+        this.NOM_ESTACIO = NOM_ESTACIO;
+        this.PICTO = PICTO;
+        this.DATA = DATA;
     }
 
     public int getCODIGRUPESTACIO() {
-        return cODIGRUPESTACIO;
+        return CODI_GRUP_ESTACIO;
     }
 
-    public void setCODIGRUPESTACIO(int cODIGRUPESTACIO) {
-        this.cODIGRUPESTACIO = cODIGRUPESTACIO;
+    public void setCODIGRUPESTACIO(int CODI_GRUP_ESTACIO) {
+        this.CODI_GRUP_ESTACIO = CODI_GRUP_ESTACIO;
     }
 
     public String getNOMESTACIO() {
-        return nOMESTACIO;
+        return NOM_ESTACIO;
     }
 
-    public void setNOMESTACIO(String nOMESTACIO) {
-        this.nOMESTACIO = nOMESTACIO;
+    public void setNOMESTACIO(String NOM_ESTACIO) {
+        this.NOM_ESTACIO = NOM_ESTACIO;
     }
 
     public String getPICTO() {
-        return pICTO;
+        return PICTO;
     }
 
-    public void setPICTO(String pICTO) {
-        this.pICTO = pICTO;
+    public void setPICTO(String PICTO) {
+        this.PICTO = PICTO;
     }
 
     public String getDATA() {
-        return dATA;
+        return DATA;
     }
 
-    public void setDATA(String dATA) {
-        this.dATA = dATA;
+    public void setDATA(String DATA) {
+        this.DATA = DATA;
     }
 
 }

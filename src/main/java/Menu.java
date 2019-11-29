@@ -55,11 +55,9 @@ public class Menu {
         Scanner sc = new Scanner(System.in);
         showMenuPrincipal();
         op = sc.next();
-        String op1 = sc.next();
-        System.out.println("op = " + op);
-        System.out.println("op1 = " + op1);
+
         do{
-            switch (op1){
+            switch (op){
                 case "1":
                     escogerOpcionMenu2();
                     break;

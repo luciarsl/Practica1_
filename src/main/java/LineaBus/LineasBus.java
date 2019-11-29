@@ -1,33 +1,19 @@
 
-package salle.url;
+package LineaBus;
 
-import java.util.List;
+import java.util.*;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class LineasBus {
 
-    @SerializedName("type")
-    @Expose
     private String type;
-    @SerializedName("features")
-    @Expose
-    private List<salle.url.Feature> features = null;
-    @SerializedName("totalFeatures")
-    @Expose
+    private List<Feature> features = null;
     private int totalFeatures;
-    @SerializedName("numberMatched")
-    @Expose
     private int numberMatched;
-    @SerializedName("numberReturned")
-    @Expose
     private int numberReturned;
-    @SerializedName("timeStamp")
-    @Expose
     private String timeStamp;
-    @SerializedName("crs")
-    @Expose
-    private salle.url.Crs crs;
+    private Crs crs;
 
     /**
      * No args constructor for use in serialization
@@ -36,17 +22,7 @@ public class LineasBus {
     public LineasBus() {
     }
 
-    /**
-     * 
-     * @param timeStamp
-     * @param features
-     * @param totalFeatures
-     * @param crs
-     * @param numberReturned
-     * @param type
-     * @param numberMatched
-     */
-    public LineasBus(String type, List<salle.url.Feature> features, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, salle.url.Crs crs) {
+    public LineasBus(String type, List<Feature> features, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, Crs crs) {
         super();
         this.type = type;
         this.features = features;
@@ -65,11 +41,11 @@ public class LineasBus {
         this.type = type;
     }
 
-    public List<salle.url.Feature> getFeatures() {
+    public List<Feature> getFeatures() {
         return features;
     }
 
-    public void setFeatures(List<salle.url.Feature> features) {
+    public void setFeatures(List<Feature> features) {
         this.features = features;
     }
 
@@ -105,11 +81,11 @@ public class LineasBus {
         this.timeStamp = timeStamp;
     }
 
-    public salle.url.Crs getCrs() {
+    public Crs getCrs() {
         return crs;
     }
 
-    public void setCrs(salle.url.Crs crs) {
+    public void setCrs(Crs crs) {
         this.crs = crs;
     }
 
