@@ -12,7 +12,8 @@ public class APIReader {
     public APIReader(){
     }
 
-    public void /*LineaBus.LineasBus*/ leerLineasBus() throws FileNotFoundException {
+    public LineasBus leerLineasBus() throws FileNotFoundException {
+        LineasBus dm = new LineasBus();
         OkHttpClient cliente = new OkHttpClient();
         Request request = new Request.Builder()
                 .url("https://api.tmb.cat/v1/transit/linies/bus?app_id=3f539d36&app_key=91664a5afdb041c53a2824867899f98a")
@@ -26,12 +27,12 @@ public class APIReader {
             }
             //System.out.println(datosJson);
             Gson gson = new Gson();
-            LineasBus dm = gson.fromJson(datosJson, LineasBus.class);
-            System.out.println(dm.toString());
+            dm = gson.fromJson(datosJson, LineasBus.class);
+            //System.out.println(dm.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //return
+        return dm;
     }
 
 }
