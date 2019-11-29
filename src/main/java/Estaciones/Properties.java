@@ -6,17 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class Properties {
 
-    @SerializedName("CODI_GRUP_ESTACIO")
-    @Expose
     private int CODI_GRUP_ESTACIO;
-    @SerializedName("NOM_ESTACIO")
-    @Expose
     private String NOM_ESTACIO;
-    @SerializedName("PICTO")
-    @Expose
     private String PICTO;
-    @SerializedName("DATA")
-    @Expose
     private String DATA;
 
     /**
