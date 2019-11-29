@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.*;
 
 public class Menu {
@@ -28,8 +29,8 @@ public class Menu {
         String op;
         Scanner sc = new Scanner(System.in);
         showMenuGestionUser();
-        op = sc.next();
         do{
+            op = sc.next();
             switch (op){
                 case "a":
                     break;
@@ -45,18 +46,20 @@ public class Menu {
                     break;
                 default:
                     System.out.println("ERROR: las opciones van de a - f");
+                    showMenuGestionUser();
                     break;
             }
         }while(!op.equals("f"));
     }
 
-    public void escogerOpcion(){
+    public void escogerOpcion() throws IOException {
+        User u = new User();
+        u.crearUsuario();
         String op;
         Scanner sc = new Scanner(System.in);
         showMenuPrincipal();
-        op = sc.next();
-
         do{
+            op = sc.next();
             switch (op){
                 case "1":
                     escogerOpcionMenu2();
@@ -73,6 +76,7 @@ public class Menu {
                     System.out.println("ERROR: las opciones van de 1 - 5");
                     break;
             }
+            showMenuPrincipal();
         }while(!op.equals("5"));
     }
 }

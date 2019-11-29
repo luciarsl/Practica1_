@@ -1,4 +1,6 @@
 import LineaBus.*;
+
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.*;
 //import java.*;
@@ -7,16 +9,17 @@ public class Main {
     public static void main(String[] args) {
         try {
             Menu menu = new Menu();
-            Object lb = null;
-            Object lineasBus = lb;
-            APIReader ap = new APIReader();
-            LineasBus ll;
-            lb = ap.leerLineasBus();
-            System.out.println(lb);
+            menu.escogerOpcion();
+            //APIReader ap = new APIReader();
+            //LineasBus lb;
+            //lb = ap.leerLineasBus();
+            //System.out.println(lb);
+        } catch (FileNotFoundException fnf) {
+            //System.out.println("usuario no ha sido introducido anteriormente.");
+            //usuario no ha sido introducido con anteriormente.
         } catch (IOException e) {
-            System.out.println("ERROR: se ha producido un error.");
+            e.printStackTrace();
+            System.out.println("petó");
         }
-
     }
-
 }
