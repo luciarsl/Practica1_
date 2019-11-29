@@ -7,11 +7,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Geometry {
 
-    @SerializedName("type")
-    @Expose
     private String type;
-    @SerializedName("coordinates")
-    @Expose
     private List<Double> coordinates = null;
 
     /**

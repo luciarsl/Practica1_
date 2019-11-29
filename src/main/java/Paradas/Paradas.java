@@ -7,26 +7,12 @@ import com.google.gson.annotations.SerializedName;
 
 public class Paradas {
 
-    @SerializedName("type")
-    @Expose
     private String type;
-    @SerializedName("features")
-    @Expose
     private List<Feature> features = null;
-    @SerializedName("totalFeatures")
-    @Expose
     private int totalFeatures;
-    @SerializedName("numberMatched")
-    @Expose
     private int numberMatched;
-    @SerializedName("numberReturned")
-    @Expose
     private int numberReturned;
-    @SerializedName("timeStamp")
-    @Expose
     private String timeStamp;
-    @SerializedName("crs")
-    @Expose
     private Crs crs;
 
     /**

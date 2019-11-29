@@ -6,60 +6,24 @@ import com.google.gson.annotations.SerializedName;
 
 public class Properties {
 
-    @SerializedName("ID_PARADA")
-    @Expose
-    private int iDPARADA;
-    @SerializedName("CODI_PARADA")
-    @Expose
-    private int cODIPARADA;
-    @SerializedName("NOM_PARADA")
-    @Expose
-    private String nOMPARADA;
-    @SerializedName("DESC_PARADA")
-    @Expose
-    private String dESCPARADA;
-    @SerializedName("CODI_INTERC")
-    @Expose
-    private int cODIINTERC;
-    @SerializedName("NOM_INTERC")
-    @Expose
-    private Object nOMINTERC;
-    @SerializedName("NOM_TIPUS_PARADA")
-    @Expose
-    private String nOMTIPUSPARADA;
-    @SerializedName("NOM_TIPUS_SIMPLE_PARADA")
-    @Expose
-    private String nOMTIPUSSIMPLEPARADA;
-    @SerializedName("DESC_TIPUS_PARADA")
-    @Expose
-    private String dESCTIPUSPARADA;
-    @SerializedName("TIPIFICACIO_PARADA")
-    @Expose
-    private String tIPIFICACIOPARADA;
-    @SerializedName("ADRECA")
-    @Expose
-    private String aDRECA;
-    @SerializedName("ID_POBLACIO")
-    @Expose
-    private int iDPOBLACIO;
-    @SerializedName("NOM_POBLACIO")
-    @Expose
-    private String nOMPOBLACIO;
-    @SerializedName("ID_DISTRICTE")
-    @Expose
-    private int iDDISTRICTE;
-    @SerializedName("NOM_DISTRICTE")
-    @Expose
-    private String nOMDISTRICTE;
-    @SerializedName("DATA")
-    @Expose
-    private String dATA;
-    @SerializedName("NOM_VIA")
-    @Expose
-    private String nOMVIA;
-    @SerializedName("NOM_PROPERA_VIA")
-    @Expose
-    private String nOMPROPERAVIA;
+    private int ID_PARADA;
+    private int CODI_PARADA;
+    private String NOM_PARADA;
+    private String DESC_PARADA;
+    private int CODI_INTERC;
+    private Object NOM_INTERC;
+    private String NOM_TIPUS_PARADA;
+    private String NOM_TIPUS_SIMPLE_PARADA;
+    private String DESC_TIPUS_PARADA;
+    private String TIPIFICACIO_PARADA;
+    private String ADRECA;
+    private int ID_POBLACIO;
+    private String NOM_POBLACIO;
+    private int ID_DISTRICTE;
+    private String NOM_DISTRICTE;
+    private String DATA;
+    private String NOM_VIA;
+    private String NOM_PROPERA_VIA;
 
     /**
      * No args constructor for use in serialization
@@ -68,191 +32,170 @@ public class Properties {
     public Properties() {
     }
 
-    /**
-     * 
-     * @param dATA
-     * @param nOMPOBLACIO
-     * @param cODIINTERC
-     * @param iDPOBLACIO
-     * @param iDDISTRICTE
-     * @param nOMPARADA
-     * @param dESCPARADA
-     * @param nOMTIPUSSIMPLEPARADA
-     * @param nOMDISTRICTE
-     * @param nOMVIA
-     * @param tIPIFICACIOPARADA
-     * @param cODIPARADA
-     * @param iDPARADA
-     * @param nOMTIPUSPARADA
-     * @param nOMINTERC
-     * @param dESCTIPUSPARADA
-     * @param aDRECA
-     * @param nOMPROPERAVIA
-     */
-    public Properties(int iDPARADA, int cODIPARADA, String nOMPARADA, String dESCPARADA, int cODIINTERC, Object nOMINTERC, String nOMTIPUSPARADA, String nOMTIPUSSIMPLEPARADA, String dESCTIPUSPARADA, String tIPIFICACIOPARADA, String aDRECA, int iDPOBLACIO, String nOMPOBLACIO, int iDDISTRICTE, String nOMDISTRICTE, String dATA, String nOMVIA, String nOMPROPERAVIA) {
+    public Properties(int ID_PARADA, int CODI_PARADA, String NOM_PARADA, String DESC_PARADA, int CODI_INTERC, Object NOM_INTERC, String NOM_TIPUS_PARADA, String NOM_TIPUS_SIMPLE_PARADA, String DESC_TIPUS_PARADA, String TIPIFICACIO_PARADA, String ADRECA, int ID_POBLACIO, String NOM_POBLACIO, int ID_DISTRICTE, String NOM_DISTRICTE, String DATA, String NOM_VIA, String NOM_PROPERA_VIA) {
         super();
-        this.iDPARADA = iDPARADA;
-        this.cODIPARADA = cODIPARADA;
-        this.nOMPARADA = nOMPARADA;
-        this.dESCPARADA = dESCPARADA;
-        this.cODIINTERC = cODIINTERC;
-        this.nOMINTERC = nOMINTERC;
-        this.nOMTIPUSPARADA = nOMTIPUSPARADA;
-        this.nOMTIPUSSIMPLEPARADA = nOMTIPUSSIMPLEPARADA;
-        this.dESCTIPUSPARADA = dESCTIPUSPARADA;
-        this.tIPIFICACIOPARADA = tIPIFICACIOPARADA;
-        this.aDRECA = aDRECA;
-        this.iDPOBLACIO = iDPOBLACIO;
-        this.nOMPOBLACIO = nOMPOBLACIO;
-        this.iDDISTRICTE = iDDISTRICTE;
-        this.nOMDISTRICTE = nOMDISTRICTE;
-        this.dATA = dATA;
-        this.nOMVIA = nOMVIA;
-        this.nOMPROPERAVIA = nOMPROPERAVIA;
+        this.ID_PARADA = ID_PARADA;
+        this.CODI_PARADA = CODI_PARADA;
+        this.NOM_PARADA = NOM_PARADA;
+        this.DESC_PARADA = DESC_PARADA;
+        this.CODI_INTERC = CODI_INTERC;
+        this.NOM_INTERC = NOM_INTERC;
+        this.NOM_TIPUS_PARADA = NOM_TIPUS_PARADA;
+        this.NOM_TIPUS_SIMPLE_PARADA = NOM_TIPUS_SIMPLE_PARADA;
+        this.DESC_TIPUS_PARADA = DESC_TIPUS_PARADA;
+        this.TIPIFICACIO_PARADA = TIPIFICACIO_PARADA;
+        this.ADRECA = ADRECA;
+        this.ID_POBLACIO = ID_POBLACIO;
+        this.NOM_POBLACIO = NOM_POBLACIO;
+        this.ID_DISTRICTE = ID_DISTRICTE;
+        this.NOM_DISTRICTE = NOM_DISTRICTE;
+        this.DATA = DATA;
+        this.NOM_VIA = NOM_VIA;
+        this.NOM_PROPERA_VIA = NOM_PROPERA_VIA;
     }
 
     public int getIDPARADA() {
-        return iDPARADA;
+        return ID_PARADA;
     }
 
-    public void setIDPARADA(int iDPARADA) {
-        this.iDPARADA = iDPARADA;
+    public void setIDPARADA(int ID_PARADA) {
+        this.ID_PARADA = ID_PARADA;
     }
 
     public int getCODIPARADA() {
-        return cODIPARADA;
+        return CODI_PARADA;
     }
 
-    public void setCODIPARADA(int cODIPARADA) {
-        this.cODIPARADA = cODIPARADA;
+    public void setCODIPARADA(int CODI_PARADA) {
+        this.CODI_PARADA = CODI_PARADA;
     }
 
     public String getNOMPARADA() {
-        return nOMPARADA;
+        return NOM_PARADA;
     }
 
-    public void setNOMPARADA(String nOMPARADA) {
-        this.nOMPARADA = nOMPARADA;
+    public void setNOMPARADA(String NOM_PARADA) {
+        this.NOM_PARADA = NOM_PARADA;
     }
 
     public String getDESCPARADA() {
-        return dESCPARADA;
+        return DESC_PARADA;
     }
 
-    public void setDESCPARADA(String dESCPARADA) {
-        this.dESCPARADA = dESCPARADA;
+    public void setDESCPARADA(String DESC_PARADA) {
+        this.DESC_PARADA = DESC_PARADA;
     }
 
     public int getCODIINTERC() {
-        return cODIINTERC;
+        return CODI_INTERC;
     }
 
-    public void setCODIINTERC(int cODIINTERC) {
-        this.cODIINTERC = cODIINTERC;
+    public void setCODIINTERC(int CODI_INTERC) {
+        this.CODI_INTERC = CODI_INTERC;
     }
 
     public Object getNOMINTERC() {
-        return nOMINTERC;
+        return NOM_INTERC;
     }
 
-    public void setNOMINTERC(Object nOMINTERC) {
-        this.nOMINTERC = nOMINTERC;
+    public void setNOMINTERC(Object NOM_INTERC) {
+        this.NOM_INTERC = NOM_INTERC;
     }
 
     public String getNOMTIPUSPARADA() {
-        return nOMTIPUSPARADA;
+        return NOM_TIPUS_PARADA;
     }
 
-    public void setNOMTIPUSPARADA(String nOMTIPUSPARADA) {
-        this.nOMTIPUSPARADA = nOMTIPUSPARADA;
+    public void setNOMTIPUSPARADA(String NOM_TIPUS_PARADA) {
+        this.NOM_TIPUS_PARADA = NOM_TIPUS_PARADA;
     }
 
     public String getNOMTIPUSSIMPLEPARADA() {
-        return nOMTIPUSSIMPLEPARADA;
+        return NOM_TIPUS_SIMPLE_PARADA;
     }
 
-    public void setNOMTIPUSSIMPLEPARADA(String nOMTIPUSSIMPLEPARADA) {
-        this.nOMTIPUSSIMPLEPARADA = nOMTIPUSSIMPLEPARADA;
+    public void setNOMTIPUSSIMPLEPARADA(String NOM_TIPUS_SIMPLE_PARADA) {
+        this.NOM_TIPUS_SIMPLE_PARADA = NOM_TIPUS_SIMPLE_PARADA;
     }
 
     public String getDESCTIPUSPARADA() {
-        return dESCTIPUSPARADA;
+        return DESC_TIPUS_PARADA;
     }
 
-    public void setDESCTIPUSPARADA(String dESCTIPUSPARADA) {
-        this.dESCTIPUSPARADA = dESCTIPUSPARADA;
+    public void setDESCTIPUSPARADA(String DESC_TIPUS_PARADA) {
+        this.DESC_TIPUS_PARADA = DESC_TIPUS_PARADA;
     }
 
     public String getTIPIFICACIOPARADA() {
-        return tIPIFICACIOPARADA;
+        return TIPIFICACIO_PARADA;
     }
 
-    public void setTIPIFICACIOPARADA(String tIPIFICACIOPARADA) {
-        this.tIPIFICACIOPARADA = tIPIFICACIOPARADA;
+    public void setTIPIFICACIOPARADA(String TIPIFICACIO_PARADA) {
+        this.TIPIFICACIO_PARADA = TIPIFICACIO_PARADA;
     }
 
     public String getADRECA() {
-        return aDRECA;
+        return ADRECA;
     }
 
-    public void setADRECA(String aDRECA) {
-        this.aDRECA = aDRECA;
+    public void setADRECA(String ADRECA) {
+        this.ADRECA = ADRECA;
     }
 
     public int getIDPOBLACIO() {
-        return iDPOBLACIO;
+        return ID_POBLACIO;
     }
 
-    public void setIDPOBLACIO(int iDPOBLACIO) {
-        this.iDPOBLACIO = iDPOBLACIO;
+    public void setIDPOBLACIO(int ID_POBLACIO) {
+        this.ID_POBLACIO = ID_POBLACIO;
     }
 
     public String getNOMPOBLACIO() {
-        return nOMPOBLACIO;
+        return NOM_POBLACIO;
     }
 
-    public void setNOMPOBLACIO(String nOMPOBLACIO) {
-        this.nOMPOBLACIO = nOMPOBLACIO;
+    public void setNOMPOBLACIO(String NOM_POBLACIO) {
+        this.NOM_POBLACIO = NOM_POBLACIO;
     }
 
     public int getIDDISTRICTE() {
-        return iDDISTRICTE;
+        return ID_DISTRICTE;
     }
 
-    public void setIDDISTRICTE(int iDDISTRICTE) {
-        this.iDDISTRICTE = iDDISTRICTE;
+    public void setIDDISTRICTE(int ID_DISTRICTE) {
+        this.ID_DISTRICTE = ID_DISTRICTE;
     }
 
     public String getNOMDISTRICTE() {
-        return nOMDISTRICTE;
+        return NOM_DISTRICTE;
     }
 
-    public void setNOMDISTRICTE(String nOMDISTRICTE) {
-        this.nOMDISTRICTE = nOMDISTRICTE;
+    public void setNOMDISTRICTE(String NOM_DISTRICTE) {
+        this.NOM_DISTRICTE = NOM_DISTRICTE;
     }
 
     public String getDATA() {
-        return dATA;
+        return DATA;
     }
 
-    public void setDATA(String dATA) {
-        this.dATA = dATA;
+    public void setDATA(String DATA) {
+        this.DATA = DATA;
     }
 
     public String getNOMVIA() {
-        return nOMVIA;
+        return NOM_VIA;
     }
 
-    public void setNOMVIA(String nOMVIA) {
-        this.nOMVIA = nOMVIA;
+    public void setNOMVIA(String NOM_VIA) {
+        this.NOM_VIA = NOM_VIA;
     }
 
     public String getNOMPROPERAVIA() {
-        return nOMPROPERAVIA;
+        return NOM_PROPERA_VIA;
     }
 
-    public void setNOMPROPERAVIA(String nOMPROPERAVIA) {
-        this.nOMPROPERAVIA = nOMPROPERAVIA;
+    public void setNOMPROPERAVIA(String NOM_PROPERA_VIA) {
+        this.NOM_PROPERA_VIA = NOM_PROPERA_VIA;
     }
 
 }
