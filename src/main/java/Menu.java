@@ -25,7 +25,7 @@ public class Menu {
         System.out.println("\nSelecciona opcion: ");
     }
 
-    private void escogerOpcionMenu2(){
+    private void escogerOpcionMenu2(User user){
         String op;
         Scanner sc = new Scanner(System.in);
         showMenuGestionUser();
@@ -33,6 +33,8 @@ public class Menu {
             op = sc.next();
             switch (op){
                 case "a":
+                    OpcionGestionUser ogu = new OpcionGestionUser();
+                    ogu.misLocalizaciones(user);
                     showMenuGestionUser();
                     break;
                 case "b":
@@ -67,7 +69,7 @@ public class Menu {
             op = sc.next();
             switch (op){
                 case "1":
-                    escogerOpcionMenu2();
+                    escogerOpcionMenu2(u);
                     showMenuPrincipal();
                     break;
                 case "2":

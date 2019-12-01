@@ -13,8 +13,16 @@ public class User {
     private String nombre;
     private String correo;
     private int anyoNacimineto;
+    private List<Location> localizaciones;
 
     public User (){
+    }
+
+    public User(String nombre, String correo, int anyoNacimineto, List<Location> localizaciones) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.anyoNacimineto = anyoNacimineto;
+        this.localizaciones = localizaciones;
     }
 
     public String getNombre() {
@@ -41,10 +49,12 @@ public class User {
         this.anyoNacimineto = anyoNacimineto;
     }
 
-    public User(String nombre, String correo, int anyoNacimineto) {
-        this.nombre = nombre;
-        this.correo = correo;
-        this.anyoNacimineto = anyoNacimineto;
+    public List<Location> getLocalizaciones() {
+        return localizaciones;
+    }
+
+    public void setLocalizaciones(List<Location> localizaciones) {
+        this.localizaciones = localizaciones;
     }
 
     public User crearUsuario() {
@@ -55,7 +65,7 @@ public class User {
             System.out.println(json.getNombre());
         } catch (IOException e) {
             Scanner sc = new Scanner(System.in);
-            //User u = new User();
+            u.localizaciones = null;
             System.out.println("Nombre del usuario: ");
             u.nombre = sc.next();
             System.out.println("correo electronico: ");
@@ -80,6 +90,7 @@ public class User {
             //System.out.println(u);
             Gson escrituraGson = new GsonBuilder().setPrettyPrinting().create();
             String json = escrituraGson.toJson(u);
+            System.out.println(json);
             FileWriter fw = new FileWriter("user.json");
             fw.write(json);
             //obligo a vaciar to_do el string del json en el archivo.
@@ -96,7 +107,7 @@ public class User {
                 "nombre='" + nombre + '\'' +
                 ", correo='" + correo + '\'' +
                 ", anyoNacimineto=" + anyoNacimineto +
+                ", localizaciones=" + localizaciones +
                 '}';
     }
-
 }

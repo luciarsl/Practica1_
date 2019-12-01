@@ -6,8 +6,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class DataModel {
 
-    @SerializedName("locations")
-    @Expose
     private List<Location> locations = null;
 
     public DataModel() {
@@ -25,10 +23,11 @@ public class DataModel {
     public void setLocations(List<Location> locations) {
         this.locations = locations;
     }
-/*
+
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("locations", locations).toString();
+        return "DataModel{" +
+                "locations=" + locations.toString() +
+                '}';
     }
-*/
 }

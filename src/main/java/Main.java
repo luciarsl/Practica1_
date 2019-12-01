@@ -10,16 +10,16 @@ public class Main {
         try {
             Menu menu = new Menu();
             menu.escogerOpcion();
-            //APIReader ap = new APIReader();
-            //LineasBus lb;
-            //lb = ap.leerLineasBus();
-            //System.out.println(lb);
+            /*User u = new User("a", "a.com", 1000, null);
+            OpcionGestionUser ogu = new OpcionGestionUser();
+            ogu.misLocalizaciones(u);*/
+
         } catch (FileNotFoundException fnf) {
-            //System.out.println("usuario no ha sido introducido anteriormente.");
+            System.out.println("usuario no ha sido introducido anteriormente.");
             //usuario no ha sido introducido con anteriormente.
         } catch (IOException e) {
             e.printStackTrace();
-            //System.out.println("petó");
+            System.out.println("petó");
         }
     }
 }
