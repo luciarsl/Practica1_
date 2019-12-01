@@ -33,14 +33,19 @@ public class Menu {
             op = sc.next();
             switch (op){
                 case "a":
+                    showMenuGestionUser();
                     break;
                 case "b":
+                    showMenuGestionUser();
                     break;
                 case "c":
+                    showMenuGestionUser();
                     break;
                 case "d":
+                    showMenuGestionUser();
                     break;
                 case "e":
+                    showMenuGestionUser();
                     break;
                 case "f":
                     break;
@@ -63,20 +68,24 @@ public class Menu {
             switch (op){
                 case "1":
                     escogerOpcionMenu2();
+                    showMenuPrincipal();
                     break;
                 case "2":
+                    showMenuPrincipal();
                     break;
                 case "3":
+                    showMenuPrincipal();
                     break;
                 case "4":
+                    showMenuPrincipal();
                     break;
                 case "5":
                     break;
                 default:
                     System.out.println("ERROR: las opciones van de 1 - 5");
+                    showMenuPrincipal();
                     break;
             }
-            showMenuPrincipal();
         }while(!op.equals("5"));
     }
 }

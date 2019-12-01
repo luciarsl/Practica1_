@@ -12,7 +12,7 @@ public class APIReader {
     public APIReader(){
     }
 
-    public LineasBus leerLineasBus() throws FileNotFoundException {
+    public LineasBus leerLineasBus() {
         LineasBus dm = new LineasBus();
         OkHttpClient cliente = new OkHttpClient();
         Request request = new Request.Builder()
