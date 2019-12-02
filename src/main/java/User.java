@@ -13,12 +13,13 @@ public class User {
     private String nombre;
     private String correo;
     private int anyoNacimineto;
-    private List<Location> localizaciones;
+    private LinkedList<Location> localizaciones;
 
     public User (){
+        localizaciones = new LinkedList<>();
     }
 
-    public User(String nombre, String correo, int anyoNacimineto, List<Location> localizaciones) {
+    public User(String nombre, String correo, int anyoNacimineto, LinkedList<Location> localizaciones) {
         this.nombre = nombre;
         this.correo = correo;
         this.anyoNacimineto = anyoNacimineto;
@@ -49,20 +50,22 @@ public class User {
         this.anyoNacimineto = anyoNacimineto;
     }
 
-    public List<Location> getLocalizaciones() {
+    public LinkedList<Location> getLocalizaciones() {
         return localizaciones;
     }
 
-    public void setLocalizaciones(List<Location> localizaciones) {
+    public void setLocalizaciones(LinkedList<Location> localizaciones) {
         this.localizaciones = localizaciones;
     }
 
     public User crearUsuario() {
         User u = new User();
         try {
-            User json = getJson();
-            System.out.println(json);
-            System.out.println(json.getNombre());
+            //User json = getJson();
+            u = getJson();
+            //System.out.println(u);
+            //System.out.println(json);
+            //System.out.println(json.getNombre());
         } catch (IOException e) {
             Scanner sc = new Scanner(System.in);
             u.localizaciones = null;
@@ -85,12 +88,10 @@ public class User {
         return lecturaGson.fromJson(fr, User.class);
     }
 
-    private void makeJson(User u) {
+    public void makeJson(User u) {
         try {
-            //System.out.println(u);
             Gson escrituraGson = new GsonBuilder().setPrettyPrinting().create();
             String json = escrituraGson.toJson(u);
-            System.out.println(json);
             FileWriter fw = new FileWriter("user.json");
             fw.write(json);
             //obligo a vaciar to_do el string del json en el archivo.

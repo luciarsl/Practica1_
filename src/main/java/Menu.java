@@ -61,7 +61,7 @@ public class Menu {
 
     public void escogerOpcion() throws IOException {
         User u = new User();
-        u.crearUsuario();
+        u = u.crearUsuario();
         String op;
         Scanner sc = new Scanner(System.in);
         showMenuPrincipal();

@@ -1,5 +1,31 @@
 {
-  "nombre": "lucia",
-  "correo": "lucia@me.com",
-  "anyoNacimineto": 1999
+  "nombre": "lu",
+  "correo": "lu@me.com",
+  "anyoNacimineto": 1999,
+  "localizaciones": [
+    {
+      "name": "loc",
+      "coordinates": [
+        2.0,
+        12.0
+      ],
+      "description": "loc"
+    },
+    {
+      "name": "locloc",
+      "coordinates": [
+        1.0,
+        11.0
+      ],
+      "description": "locloc"
+    },
+    {
+      "name": "mina wario 2",
+      "coordinates": [
+        2.0,
+        11.0
+      ],
+      "description": "mina wario 2 es el nombre que le pusieron al barrio mina wario despues de la reforma"
+    }
+  ]
 }

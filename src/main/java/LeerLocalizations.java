@@ -13,7 +13,7 @@ public class LeerLocalizations {
         DataModel location = null;
         try {
             location = getLoc();
-            System.out.println(location.toString());
+            //System.out.println(location.toString());
         } catch (IOException e) {
             System.out.println("ERROR: se ha producido un error.");
         }
