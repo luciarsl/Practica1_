@@ -73,6 +73,8 @@ public class Menu {
                     showMenuPrincipal();
                     break;
                 case "2":
+                    BuscarLoc bl = new BuscarLoc();
+                    bl.buscarLoc(u);
                     showMenuPrincipal();
                     break;
                 case "3":

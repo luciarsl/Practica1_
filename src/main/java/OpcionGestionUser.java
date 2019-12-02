@@ -30,13 +30,13 @@ public class OpcionGestionUser {
             switch (respuesta){
                 case "si":
                 case "sí":
-                    System.out.println("escogio Si");
-                    System.out.println(respuesta);
+                    //System.out.println("escogio Si");
+                    //System.out.println(respuesta);
                     nuevaLocalizacion(user);
                     break;
                 case "no":
-                    System.out.println("escogio no");
-                    System.out.println(respuesta);
+                    //System.out.println("escogio no");
+                    //System.out.println(respuesta);
                     no = true;
                     break;
                 default:
@@ -111,4 +111,5 @@ public class OpcionGestionUser {
         u.makeJson(u);
         System.out.println(u);
     }
+    //TODO: istorial de localizaciones?!!?
 }
