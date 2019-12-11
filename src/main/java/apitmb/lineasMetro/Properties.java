@@ -1,13 +1,9 @@
 
-package LineaMetro;
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+package apitmb.lineasMetro;
 
 public class Properties {
-
-    private int ID_LINIA;
-    private int CODI_LINIA;
+    private String ID_LINIA;
+    private String CODI_LINIA;
     private String NOM_LINIA;
     private String DESC_LINIA;
     private String ORIGEN_LINIA;
@@ -27,37 +23,10 @@ public class Properties {
     private String COLOR_AUX_LINIA;
     private String COLOR_TEXT_LINIA;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Properties() {
     }
 
-    /**
-     * 
-     * @param CODI_FAMILIA
-     * @param NOM_TIPUS_CALENDARI
-     * @param NOM_FAMILIA
-     * @param DATA
-     * @param COLOR_TEXT_LINIA
-     * @param CODI_LINIA
-     * @param ID_LINIA
-     * @param CODI_TIPUS_CALENDARI
-     * @param DESC_LINIA
-     * @param COLOR_LINIA
-     * @param DESTI_LINIA
-     * @param ID_OPERADOR
-     * @param NOM_OPERADOR
-     * @param NUM_PAQUETS
-     * @param ORDRE_LINIA
-     * @param NOM_LINIA
-     * @param COLOR_AUX_LINIA
-     * @param NOM_TIPUS_TRANSPORT
-     * @param ORDRE_FAMILIA
-     * @param ORIGEN_LINIA
-     */
-    public Properties(int ID_LINIA, int CODI_LINIA, String NOM_LINIA, String DESC_LINIA, String ORIGEN_LINIA, String DESTI_LINIA, int NUM_PAQUETS, int ID_OPERADOR, String NOM_OPERADOR, String NOM_TIPUS_TRANSPORT, int CODI_FAMILIA, String NOM_FAMILIA, int ORDRE_FAMILIA, int ORDRE_LINIA, String CODI_TIPUS_CALENDARI, String NOM_TIPUS_CALENDARI, String DATA, String COLOR_LINIA, String COLOR_AUX_LINIA, String COLOR_TEXT_LINIA) {
+    public Properties(String ID_LINIA, String CODI_LINIA, String NOM_LINIA, String DESC_LINIA, String ORIGEN_LINIA, String DESTI_LINIA, int NUM_PAQUETS, int ID_OPERADOR, String NOM_OPERADOR, String NOM_TIPUS_TRANSPORT, int CODI_FAMILIA, String NOM_FAMILIA, int ORDRE_FAMILIA, int ORDRE_LINIA, String CODI_TIPUS_CALENDARI, String NOM_TIPUS_CALENDARI, String DATA, String COLOR_LINIA, String COLOR_AUX_LINIA, String COLOR_TEXT_LINIA) {
         super();
         this.ID_LINIA = ID_LINIA;
         this.CODI_LINIA = CODI_LINIA;
@@ -81,19 +50,19 @@ public class Properties {
         this.COLOR_TEXT_LINIA = COLOR_TEXT_LINIA;
     }
 
-    public int getIDLINIA() {
+    public String getIDLINIA() {
         return ID_LINIA;
     }
 
-    public void setIDLINIA(int ID_LINIA) {
+    public void setIDLINIA(String ID_LINIA) {
         this.ID_LINIA = ID_LINIA;
     }
 
-    public int getCODILINIA() {
+    public String getCODILINIA() {
         return CODI_LINIA;
     }
 
-    public void setCODILINIA(int CODI_LINIA) {
+    public void setCODILINIA(String CODI_LINIA) {
         this.CODI_LINIA = CODI_LINIA;
     }
 

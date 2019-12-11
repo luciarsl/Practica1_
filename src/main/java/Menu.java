@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.*;
 
 public class Menu {
@@ -25,29 +26,39 @@ public class Menu {
         System.out.println("\nSelecciona opcion: ");
     }
 
-    private void escogerOpcionMenu2(User user){
-        String op;
+    private void escogerOpcionMenu2(User user, DataModel dm, LinkedList<String> historialLoc){
         Scanner sc = new Scanner(System.in);
+        OpcionGestionUser ogu = new OpcionGestionUser();
+        String op;
         showMenuGestionUser();
         do{
             op = sc.next();
             switch (op){
                 case "a":
-                    OpcionGestionUser ogu = new OpcionGestionUser();
-                    ogu.misLocalizaciones(user);
+
+                    ogu.misLocalizaciones(user, dm);
                     showMenuGestionUser();
                     break;
                 case "b":
+                    ogu.historialLocalizaciones(historialLoc);
                     showMenuGestionUser();
                     break;
                 case "c":
+                    System.out.println("opcion c");
                     showMenuGestionUser();
                     break;
                 case "d":
+                    System.out.println("opcion d");
                     showMenuGestionUser();
                     break;
                 case "e":
-                    showMenuGestionUser();
+                    try {
+                        ogu.estacionesMiAnyo(user);
+                        showMenuGestionUser();
+                    } catch (UnknownHostException e) {
+                        System.out.println("Error al recuperar la información del servidor."
+                            + "\nComprueba tu conexión a Internet");
+                    }
                     break;
                 case "f":
                     break;
@@ -60,6 +71,10 @@ public class Menu {
     }
 
     public void escogerOpcion() throws IOException {
+        LeerLocalizations ll = new LeerLocalizations();
+        DataModel dm = ll.leerLocalizations();
+        //LinkedList<LocalizacionPreferida> locsPrefs = new LinkedList<>();
+        LinkedList<String> historialLoc = new LinkedList<>();
         User u = new User();
         u = u.crearUsuario();
         String op;
@@ -69,12 +84,12 @@ public class Menu {
             op = sc.next();
             switch (op){
                 case "1":
-                    escogerOpcionMenu2(u);
+                    escogerOpcionMenu2(u, dm, historialLoc);
                     showMenuPrincipal();
                     break;
                 case "2":
                     BuscarLoc bl = new BuscarLoc();
-                    bl.buscarLoc(u);
+                    historialLoc = bl.buscarLoc(u, historialLoc);
                     showMenuPrincipal();
                     break;
                 case "3":

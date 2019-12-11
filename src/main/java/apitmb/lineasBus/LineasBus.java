@@ -1,9 +1,7 @@
+package apitmb.lineasBus;
 
-package LineaBus;
-
+import apitmb.Crs;
 import java.util.*;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 public class LineasBus {
 
@@ -22,10 +20,10 @@ public class LineasBus {
     public LineasBus() {
     }
 
-    public LineasBus(String type, List<Feature> features, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, Crs crs) {
+    public LineasBus(String type, List<Feature> featureLBS, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, Crs crs) {
         super();
         this.type = type;
-        this.features = features;
+        this.features = featureLBS;
         this.totalFeatures = totalFeatures;
         this.numberMatched = numberMatched;
         this.numberReturned = numberReturned;
@@ -45,8 +43,8 @@ public class LineasBus {
         return features;
     }
 
-    public void setFeatures(List<Feature> features) {
-        this.features = features;
+    public void setFeatures(List<Feature> featureLBS) {
+        this.features = featureLBS;
     }
 
     public int getTotalFeatures() {
@@ -91,7 +89,7 @@ public class LineasBus {
 
     @Override
     public String toString() {
-        return "LineasBus{" +
+        return "apitmb.LineaBus.LineasBus{" +
                 "\ntype='" + type + '\'' +
                 ",\n features=" + features +
                 ",\n totalFeatures=" + totalFeatures +

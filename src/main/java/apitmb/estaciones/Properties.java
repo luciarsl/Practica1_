@@ -1,30 +1,15 @@
 
-package Estaciones;
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+package apitmb.estaciones;
 
 public class Properties {
-
     private int CODI_GRUP_ESTACIO;
     private String NOM_ESTACIO;
     private String PICTO;
     private String DATA;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Properties() {
     }
 
-    /**
-     * 
-     * @param DATA
-     * @param NOM_ESTACIO
-     * @param PICTO
-     * @param CODIGRUPESTACIO
-     */
     public Properties(int CODIGRUPESTACIO, String NOM_ESTACIO, String PICTO, String DATA) {
         super();
         this.CODI_GRUP_ESTACIO = CODIGRUPESTACIO;
@@ -65,4 +50,13 @@ public class Properties {
         this.DATA = DATA;
     }
 
+    @Override
+    public String toString() {
+        return "Properties{" +
+                "CODI_GRUP_ESTACIO=" + CODI_GRUP_ESTACIO +
+                ", NOM_ESTACIO='" + NOM_ESTACIO + '\'' +
+                ", PICTO='" + PICTO + '\'' +
+                ", DATA='" + DATA + '\'' +
+                '}';
+    }
 }

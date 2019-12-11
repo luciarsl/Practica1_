@@ -1,4 +1,7 @@
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+import jdk.nashorn.internal.parser.JSONParser;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -23,6 +26,8 @@ public class LeerLocalizations {
     private DataModel getLoc() throws FileNotFoundException {
         Gson lecturaGson = new Gson();
         FileReader fr = new FileReader("localitzacions.json");
+
+        //JsonElement jsonElement =
         return lecturaGson.fromJson(fr, DataModel.class);
     }
 }

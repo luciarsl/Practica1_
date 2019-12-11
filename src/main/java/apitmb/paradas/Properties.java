@@ -1,11 +1,7 @@
 
-package Paradas;
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+package apitmb.paradas;
 
 public class Properties {
-
     private int ID_PARADA;
     private int CODI_PARADA;
     private String NOM_PARADA;

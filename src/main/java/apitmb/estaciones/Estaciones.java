@@ -1,9 +1,7 @@
+package apitmb.estaciones;
 
-package Estaciones;
-
+import apitmb.Crs;
 import java.util.List;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 public class Estaciones {
 
@@ -15,23 +13,9 @@ public class Estaciones {
     private String timeStamp;
     private Crs crs;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Estaciones() {
     }
 
-    /**
-     * 
-     * @param timeStamp
-     * @param features
-     * @param totalFeatures
-     * @param crs
-     * @param numberReturned
-     * @param type
-     * @param numberMatched
-     */
     public Estaciones(String type, List<Feature> features, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, Crs crs) {
         super();
         this.type = type;
@@ -99,4 +83,16 @@ public class Estaciones {
         this.crs = crs;
     }
 
+    @Override
+    public String toString() {
+        return "apitmb.apitmb.Estaciones.Estaciones{" +
+                "type='" + type + '\'' +
+                ", features=" + features +
+                ", totalFeatures=" + totalFeatures +
+                ", numberMatched=" + numberMatched +
+                ", numberReturned=" + numberReturned +
+                ", timeStamp='" + timeStamp + '\'' +
+                ", crs=" + crs +
+                '}';
+    }
 }

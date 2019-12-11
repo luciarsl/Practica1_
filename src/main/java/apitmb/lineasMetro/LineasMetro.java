@@ -1,11 +1,10 @@
+package apitmb.lineasMetro;
 
-package Paradas;
-
+import apitmb.Crs;
 import java.util.List;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
-public class Paradas {
+
+public class LineasMetro {
 
     private String type;
     private List<Feature> features = null;
@@ -15,24 +14,10 @@ public class Paradas {
     private String timeStamp;
     private Crs crs;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
-    public Paradas() {
+    public LineasMetro() {
     }
 
-    /**
-     * 
-     * @param timeStamp
-     * @param features
-     * @param totalFeatures
-     * @param crs
-     * @param numberReturned
-     * @param type
-     * @param numberMatched
-     */
-    public Paradas(String type, List<Feature> features, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, Crs crs) {
+    public LineasMetro(String type, List<Feature> features, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, Crs crs) {
         super();
         this.type = type;
         this.features = features;
@@ -99,4 +84,17 @@ public class Paradas {
         this.crs = crs;
     }
 
+
+    @Override
+    public String toString() {
+        return "LineasMetro{" +
+                "type='" + type + '\'' +
+                ", feature=" + features +
+                ", totalFeatures=" + totalFeatures +
+                ", numberMatched=" + numberMatched +
+                ", numberReturned=" + numberReturned +
+                ", timeStamp='" + timeStamp + '\'' +
+                ", crs=" + crs +
+                '}';
+    }
 }

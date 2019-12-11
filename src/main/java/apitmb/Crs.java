@@ -1,27 +1,13 @@
-
-package LineaBus;
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+package apitmb;
 
 public class Crs {
 
     private String type;
-
     private Properties_ properties;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Crs() {
     }
 
-    /**
-     * 
-     * @param type
-     * @param properties
-     */
     public Crs(String type, Properties_ properties) {
         super();
         this.type = type;
@@ -42,6 +28,11 @@ public class Crs {
 
     public void setProperties(Properties_ properties) {
         this.properties = properties;
+    }
+
+    public Crs withProperties(Properties_ properties) {
+        this.properties = properties;
+        return this;
     }
 
 }

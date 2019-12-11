@@ -20,12 +20,26 @@
       "description": "locloc"
     },
     {
-      "name": "mina wario 2",
+      "name": "local",
       "coordinates": [
         2.0,
-        11.0
+        22.0
       ],
-      "description": "mina wario 2 es el nombre que le pusieron al barrio mina wario despues de la reforma"
+      "description": "ahhhh"
+    }
+  ],
+  "locPrefs": [
+    {
+      "loc": {
+        "name": "loc",
+        "coordinates": [
+          2.0,
+          12.0
+        ],
+        "description": "loc"
+      },
+      "c2": "Dec 3, 2019 8:42:46 PM",
+      "tipo": "casa"
     }
   ]
 }

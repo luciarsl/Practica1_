@@ -14,48 +14,29 @@ public class User {
     private String correo;
     private int anyoNacimineto;
     private LinkedList<Location> localizaciones;
+    private LinkedList<LocalizacionPreferida> locPrefs;
 
     public User (){
-        localizaciones = new LinkedList<>();
     }
 
-    public User(String nombre, String correo, int anyoNacimineto, LinkedList<Location> localizaciones) {
+    public User(String nombre, String correo, int anyoNacimineto, LinkedList<Location> localizaciones, LinkedList<LocalizacionPreferida> locPrefs) {
         this.nombre = nombre;
         this.correo = correo;
         this.anyoNacimineto = anyoNacimineto;
         this.localizaciones = localizaciones;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
+        this.locPrefs = locPrefs;
     }
 
     public int getAnyoNacimineto() {
         return anyoNacimineto;
     }
 
-    public void setAnyoNacimineto(int anyoNacimineto) {
-        this.anyoNacimineto = anyoNacimineto;
-    }
-
     public LinkedList<Location> getLocalizaciones() {
         return localizaciones;
     }
 
-    public void setLocalizaciones(LinkedList<Location> localizaciones) {
-        this.localizaciones = localizaciones;
+    public LinkedList<LocalizacionPreferida> getLocPrefs() {
+        return locPrefs;
     }
 
     public User crearUsuario() {
@@ -76,6 +57,8 @@ public class User {
             System.out.println("Año de nacimiento: ");
             u.anyoNacimineto = sc.nextInt();
             makeJson(u);
+            u.localizaciones = new LinkedList<>();
+            u.locPrefs = new LinkedList<>();
             System.out.println("La informacion se ha añadido con éxito!");
 
         }
@@ -109,6 +92,7 @@ public class User {
                 ", correo='" + correo + '\'' +
                 ", anyoNacimineto=" + anyoNacimineto +
                 ", localizaciones=" + localizaciones +
+                ", locPrefs=" + locPrefs +
                 '}';
     }
 }

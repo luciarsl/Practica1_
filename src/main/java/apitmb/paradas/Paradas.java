@@ -1,41 +1,25 @@
+package apitmb.paradas;
 
-package LineaMetro;
-
+import apitmb.Crs;
 import java.util.List;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
-public class LineasMetro {
+public class Paradas {
 
     private String type;
-    private List<Feature> features = null;
+    private List<Feature> featureParadas = null;
     private int totalFeatures;
     private int numberMatched;
     private int numberReturned;
     private String timeStamp;
     private Crs crs;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
-    public LineasMetro() {
+    public Paradas() {
     }
 
-    /**
-     * 
-     * @param timeStamp
-     * @param features
-     * @param totalFeatures
-     * @param crs
-     * @param numberReturned
-     * @param type
-     * @param numberMatched
-     */
-    public LineasMetro(String type, List<Feature> features, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, Crs crs) {
+    public Paradas(String type, List<Feature> featureParadas, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, Crs crs) {
         super();
         this.type = type;
-        this.features = features;
+        this.featureParadas = featureParadas;
         this.totalFeatures = totalFeatures;
         this.numberMatched = numberMatched;
         this.numberReturned = numberReturned;
@@ -51,12 +35,12 @@ public class LineasMetro {
         this.type = type;
     }
 
-    public List<Feature> getFeatures() {
-        return features;
+    public List<Feature> getFeatureParadas() {
+        return featureParadas;
     }
 
-    public void setFeatures(List<Feature> features) {
-        this.features = features;
+    public void setFeatureParadas(List<Feature> featureParadas) {
+        this.featureParadas = featureParadas;
     }
 
     public int getTotalFeatures() {

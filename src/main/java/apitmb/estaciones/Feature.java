@@ -1,8 +1,4 @@
-
-package LineaBus;
-
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+package apitmb.estaciones;
 
 public class Feature {
 
@@ -12,11 +8,8 @@ public class Feature {
     private String geometryName;
     private Properties properties;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Feature() {
+
     }
 
     public Feature(String type, String id, Geometry geometry, String geometryName, Properties properties) {
@@ -68,4 +61,14 @@ public class Feature {
         this.properties = properties;
     }
 
+    @Override
+    public String toString() {
+        return "apitmb.LineaMetro.Feature{" +
+                "type='" + type + '\'' +
+                ", id='" + id + '\'' +
+                ", geometry=" + geometry +
+                ", geometryName='" + geometryName + '\'' +
+                ", properties=" + properties +
+                '}';
+    }
 }

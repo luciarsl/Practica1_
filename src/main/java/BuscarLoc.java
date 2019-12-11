@@ -1,13 +1,13 @@
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Scanner;
+import java.util.*;
 
 public class BuscarLoc {
     public BuscarLoc(){
     }
 
-    public void buscarLoc(User u){
+    public LinkedList<String> buscarLoc(User u, LinkedList<String> historialLoc){
+
+        //fixme: hacer que las localizaciones solo puedan añadirse una vez (en principio creo que un if y recorriendose el fichero para ver si ya existe y si ya existe no se añade)
+
         LeerLocalizations ll = new LeerLocalizations();
         Location finalLoc = new Location();
         DataModel dm = ll.leerLocalizations();
@@ -22,16 +22,18 @@ public class BuscarLoc {
         for (Location loc: dm.getLocations()) {
             if(nom.equals(loc.getName().toLowerCase())){
                 noExiste = false;
+                finalLoc = loc;
                 System.out.println(loc.toString());
-                //todo: falta crear el array o list de string para guardar los nombres de las localizacioness que has buscado y encontrado.
+                historialLoc.addFirst(loc.getName());
             }
         }
         if (u.getLocalizaciones() != null && noExiste){
             for (Location loc : u.getLocalizaciones()) {
                 if(nom.equals(loc.getName().toLowerCase())){
                     noExiste = false;
+                    finalLoc = loc;
                     System.out.println(loc.toString());
-                    //todo: falta crear el array o list de string para guardar los nombres de las localizacioness que has buscado y encontrado.
+                    historialLoc.addFirst(loc.getName());
                 }
             }
         }
@@ -54,15 +56,16 @@ public class BuscarLoc {
                             tipo = sc.next();
                             if(tipo.equals("casa") || tipo.equals("feina") || tipo.equals("estudis") || tipo.equals("oci") || tipo.equals("cultura")){
                                 Date date = new Date();
-                                LocalizacionPreferida lp = new LocalizacionPreferida(date, tipo);
-                                System.out.println(date.toString());
-                                System.out.println(lp.toString());
-                                //TODO: preguntar que es exactamente eso de "de la relacion entre bla bla" para poder termianr la opcion dos
+                                LocalizacionPreferida lp = new LocalizacionPreferida(date, tipo, finalLoc);
+                                u.getLocPrefs().add(lp);
+                                //locsPrefs.addFirst(lp);
+                                //System.out.println(u.getLocPrefs());
+                                //System.out.println("\n" + u);
                             } else {
                                 System.out.println("Error! se ha de introducir \"casa\", \"feina\", \"estudis\", \"oci\" o \"cultura\".");
                             }
                         }while(!tipo.equals("casa") && !tipo.equals("feina") && !tipo.equals("estudis") && !tipo.equals("oci") && !tipo.equals("cultura"));
-
+                        u.makeJson(u);
                         no = true;
                         break;
                     case "no":
@@ -73,8 +76,8 @@ public class BuscarLoc {
                         break;
                 }
             }while (!no);
-
         }
+        return historialLoc;
     }
 
 }
