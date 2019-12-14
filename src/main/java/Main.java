@@ -17,7 +17,6 @@ public class Main {
             //usuario no ha sido introducido con anteriormente.
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("petó");
         }
     }
 }

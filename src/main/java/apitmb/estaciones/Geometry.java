@@ -24,5 +24,7 @@ public class Geometry {
         this.type = type;
     }
 
-
+    public List<Object> getCoordinates() {
+        return coordinates;
+    }
 }

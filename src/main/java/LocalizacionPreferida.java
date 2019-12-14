@@ -12,6 +12,10 @@ public class LocalizacionPreferida {
         this.loc = loc;
     }
 
+    public Location getLoc() {
+        return loc;
+    }
+
     @Override
     public String toString() {
         return "LocalizacionPreferida{" +

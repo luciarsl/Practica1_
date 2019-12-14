@@ -6,7 +6,7 @@ import java.util.List;
 public class Paradas {
 
     private String type;
-    private List<Feature> featureParadas = null;
+    private List<Feature> features = null;
     private int totalFeatures;
     private int numberMatched;
     private int numberReturned;
@@ -16,10 +16,10 @@ public class Paradas {
     public Paradas() {
     }
 
-    public Paradas(String type, List<Feature> featureParadas, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, Crs crs) {
+    public Paradas(String type, List<Feature> features, int totalFeatures, int numberMatched, int numberReturned, String timeStamp, Crs crs) {
         super();
         this.type = type;
-        this.featureParadas = featureParadas;
+        this.features = features;
         this.totalFeatures = totalFeatures;
         this.numberMatched = numberMatched;
         this.numberReturned = numberReturned;
@@ -35,12 +35,12 @@ public class Paradas {
         this.type = type;
     }
 
-    public List<Feature> getFeatureParadas() {
-        return featureParadas;
+    public List<Feature> getFeatures() {
+        return features;
     }
 
-    public void setFeatureParadas(List<Feature> featureParadas) {
-        this.featureParadas = featureParadas;
+    public void setFeatures(List<Feature> features) {
+        this.features = features;
     }
 
     public int getTotalFeatures() {
@@ -83,4 +83,16 @@ public class Paradas {
         this.crs = crs;
     }
 
+    @Override
+    public String toString() {
+        return "Paradas{" +
+                "type='" + type + '\'' +
+                ", featureParadas=" + features +
+                ", totalFeatures=" + totalFeatures +
+                ", numberMatched=" + numberMatched +
+                ", numberReturned=" + numberReturned +
+                ", timeStamp='" + timeStamp + '\'' +
+                ", crs=" + crs +
+                '}';
+    }
 }

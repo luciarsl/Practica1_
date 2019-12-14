@@ -8,8 +8,8 @@ import com.google.gson.Gson;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
 import java.io.IOException;
+import java.net.UnknownHostException;
 
 public class APIReader {
     public APIReader(){
@@ -33,7 +33,9 @@ public class APIReader {
             lb = gson.fromJson(datosJson, LineasBus.class);
             System.out.println("lb = " + lb.toString());
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("Error al recuperar la información del servidor."
+                    + "\nComprueba tu conexión a Internet");
         }
         return lb;
     }
@@ -51,12 +53,12 @@ public class APIReader {
             if (response.body() != null){
                 datosJson = response.body().string();
             }
-            //System.out.println(datosJson);
             Gson gson = new Gson();
             estaciones = gson.fromJson(datosJson, EstacionesPorLinea.class);
-            //System.out.println(estaciones.toString());
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("Error al recuperar la información del servidor."
+                    + "\nComprueba tu conexión a Internet");
         }
         return estaciones;
     }
@@ -79,7 +81,9 @@ public class APIReader {
             lm = gson.fromJson(datosJson, LineasMetro.class);
             //System.out.println(estaciones.toString());
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("Error al recuperar la información del servidor."
+                    + "\nComprueba tu conexión a Internet");
         }
         return lm;
     }
@@ -100,9 +104,11 @@ public class APIReader {
             //System.out.println(datosJson);
             Gson gson = new Gson();
             p = gson.fromJson(datosJson, Paradas.class);
-            //System.out.println(estaciones.toString());
+            //System.out.println(p);
         } catch (IOException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            System.out.println("Error al recuperar la información del servidor."
+                    + "\nComprueba tu conexión a Internet");
         }
         return p;
     }
@@ -125,7 +131,9 @@ public class APIReader {
             e = gson.fromJson(datosJson, Estaciones.class);
             //System.out.println(estaciones.toString());
         } catch (IOException error) {
-            error.printStackTrace();
+            //error.printStackTrace();
+            System.out.println("Error al recuperar la información del servidor."
+                    + "\nComprueba tu conexión a Internet");
         }
         return e;
     }

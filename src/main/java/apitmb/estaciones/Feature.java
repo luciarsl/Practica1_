@@ -63,7 +63,7 @@ public class Feature {
 
     @Override
     public String toString() {
-        return "apitmb.LineaMetro.Feature{" +
+        return "Feature{" +
                 "type='" + type + '\'' +
                 ", id='" + id + '\'' +
                 ", geometry=" + geometry +

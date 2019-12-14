@@ -1,10 +1,15 @@
 package apitmb.paradas;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Feature {
 
     private String type;
     private String id;
     private Geometry geometry;
+    @SerializedName("geometry_name")
+    @Expose
     private String geometryName;
     private Properties properties;
 

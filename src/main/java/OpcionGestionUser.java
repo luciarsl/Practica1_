@@ -1,15 +1,15 @@
 import apitmb.estaciones.*;
-import apitmb.estaciones.*;
 import apitmb.estacionesPorLinea.*;
 import apitmb.lineasMetro.*;
 import apitmb.paradas.*;
 
-import java.net.UnknownHostException;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class OpcionGestionUser {
+    private static final double cambio = 111319.44;
 
     public void misLocalizaciones(User user, DataModel dm){
         String respuesta;
@@ -83,14 +83,14 @@ public class OpcionGestionUser {
         //todo: preguntar que es el sistema EPSG:4326
         do{
             System.out.println("Longitud:");
-            longitud = sc.nextDouble();
+            longitud = Double.parseDouble(sc.nextLine());
             if (longitud<=-90 || longitud>=90){
                 System.out.println("Error, longitud no valida");
             }
         }while(longitud<=-90 || longitud>=90);
         do{
             System.out.println("Latitud:");
-            latitud = sc.nextDouble();
+            latitud = Double.parseDouble(sc.nextLine());
             if (latitud<=-90 || latitud>=90){
                 System.out.println("Error, longitud no valida");
             }
@@ -130,7 +130,7 @@ public class OpcionGestionUser {
         }
     }
 
-    public void estacionesMiAnyo(User u) throws UnknownHostException {
+    public void estacionesMiAnyo(User u) throws NullPointerException {
         boolean encontrado =false;
         apitmb.lineasMetro.Feature prueba = new apitmb.lineasMetro.Feature();
         APIReader apiReader = new APIReader();
@@ -142,7 +142,6 @@ public class OpcionGestionUser {
                 fepl.getProperties().getDATAINAUGURACIO().getChars(0, 4, anyoCreacion, 0);
                 int x = Integer.parseInt(String.valueOf(anyoCreacion));
                 if(x==u.getAnyoNacimineto()){
-                    //todo: que es crs??
                     System.out.println(fepl.getProperties().getnOMESTACIO() + " " + fepl.getProperties().getpICTO());
                     encontrado = true;
                 }
@@ -153,12 +152,57 @@ public class OpcionGestionUser {
         }
     }
 
-    public void paradasEstacionesFav (User user) {
+    public void paradasEstacionesFav (User user) throws NullPointerException {
+        boolean metroOEstacionCerca;
+        //ParadasEstacionFav elementoLista = null;
         APIReader apiReader = new APIReader();
         Estaciones est = apiReader.leerEstaciones();
-        Paradas paradas = apiReader.leerParadas();
-        for (apitmb.estaciones.Feature festaciones: est.getFeatures()) {
+        Paradas par = apiReader.leerParadas();
+        for (LocalizacionPreferida userLocP: user.getLocPrefs()) {
+            System.out.println("-" + userLocP.getLoc().getName());
+            metroOEstacionCerca = false;
+            LinkedList<ParadasEstacionFav> lista = new LinkedList<>();
 
+            for (apitmb.estaciones.Feature festaciones: est.getFeatures()) {
+                double incTotM = getIncTot(userLocP, festaciones.getGeometry().getCoordinates());
+                if (incTotM <= 500){
+                    String stringE ="\t" + festaciones.getProperties().getNOMESTACIO() +
+                            " (" + festaciones.getProperties().getCODIGRUPESTACIO() + ") METRO";
+                    ParadasEstacionFav elementoLista = new ParadasEstacionFav(stringE, incTotM);
+                    lista.add(elementoLista);
+                    metroOEstacionCerca = true;
+                }
+            }
+            for (apitmb.paradas.Feature fparadas: par.getFeatures()) {
+                double incTotMP = getIncTot(userLocP, fparadas.getGeometry().getCoordinates());
+                if (incTotMP <= 500) {
+                    String stringP ="\t" + fparadas.getProperties().getNOMPARADA() +
+                            " (" + fparadas.getProperties().getCODIPARADA() + ") BUS";
+                    ParadasEstacionFav elementoLista = new ParadasEstacionFav(stringP, incTotMP);
+                    lista.add(elementoLista);
+                    metroOEstacionCerca = true;
+                }
+            }
+            if (!metroOEstacionCerca){
+                System.out.println("\tTMB esta haciendo todo lo posible para que el bus y el metro llegue hasta aqui");
+            } else {
+                //todo ordenar segin la distancia. FERRY HELP! XP
+                //lista.sort(lista, new Comparator<>());
+                String stringLista = lista.toString();
+                stringLista = stringLista.replace('[', ' ');
+                stringLista = stringLista.replace(']', ' ');
+                stringLista = stringLista.replace(',', ' ');
+                System.out.println(stringLista);
+
+            }
         }
+    }
+
+    private double getIncTot(LocalizacionPreferida userLocP, List<Object> coordinates) {
+        double incrementoLong = (Double) coordinates.get(0) - userLocP.getLoc().getCoordinates().get(0);
+        double incrementoLat = (Double) coordinates.get(1) - userLocP.getLoc().getCoordinates().get(1);
+        double sqrt = Math.sqrt(Math.pow(incrementoLong * cambio,2) + Math.pow(incrementoLat * cambio,2));
+        //System.out.println("Diferencia" + sqrt);
+        return sqrt;
     }
 }

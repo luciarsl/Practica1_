@@ -26,6 +26,22 @@
         22.0
       ],
       "description": "ahhhh"
+    },
+    {
+      "name": "abcd",
+      "coordinates": [
+        2.0,
+        23.0
+      ],
+      "description": "abcd"
+    },
+    {
+      "name": "salle",
+      "coordinates": [
+        2.130064,
+        41.408385
+      ],
+      "description": ""
     }
   ],
   "locPrefs": [
@@ -39,6 +55,30 @@
         "description": "loc"
       },
       "c2": "Dec 3, 2019 8:42:46 PM",
+      "tipo": "casa"
+    },
+    {
+      "loc": {
+        "name": "ESADE",
+        "coordinates": [
+          2.115061,
+          41.39482
+        ],
+        "description": "Es fa competència en mites per metre quadrat amb la Salle Campus Barcelona"
+      },
+      "c2": "Dec 11, 2019 8:06:26 PM",
+      "tipo": "feina"
+    },
+    {
+      "loc": {
+        "name": "salle",
+        "coordinates": [
+          2.130064,
+          41.408385
+        ],
+        "description": ""
+      },
+      "c2": "Dec 13, 2019 8:40:49 AM",
       "tipo": "casa"
     }
   ]

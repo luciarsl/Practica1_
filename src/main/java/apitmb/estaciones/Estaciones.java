@@ -85,7 +85,7 @@ public class Estaciones {
 
     @Override
     public String toString() {
-        return "apitmb.apitmb.Estaciones.Estaciones{" +
+        return "Estaciones{" +
                 "type='" + type + '\'' +
                 ", features=" + features +
                 ", totalFeatures=" + totalFeatures +
